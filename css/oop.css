@@ -1,0 +1,147 @@
+
+#particles-js{
+    background-color: #191f5b;
+    width: 100%;
+height: 100%;
+    background-size: 200% 200%;
+    overflow-y: auto;
+}
+.pretty{
+    margin: 10px 0;
+}
+.pretty input:focus{
+    color: greenyellow!important;
+}
+#category{
+    background-color: #666262 !important;
+    color: #fff !important;
+    border: unset!important;
+}
+.amount .form-floating input{
+    background-color: #666262 !important;
+    color: #fff !important;
+    border: unset!important;
+}
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+button svg{
+    transition: all 0.3s ease-in-out;
+}
+button:hover .svg-wrapper {
+    animation: fly-1 0.6s ease-in-out infinite alternate;
+}
+button:hover svg {
+    transform: translateX(1.3em) rotate(45deg) scale(1.1) ;
+ }
+ @keyframes fly-1 {
+    from {
+       transform: translateY(0.1em);
+    }
+ 
+    to {
+       transform: translateY(-0.1em);
+    }
+ }
+ button span{
+    transition: all 0.3s ease-in-out;
+ }
+ button:hover span{
+transform: translateX(4em);
+ }
+ button{
+    overflow: hidden;
+   outline: unset!important;
+   border: unset!important;
+ margin-top: 20px!important;
+   padding: 6px 25px;
+   margin-right: 20px!important;
+   transform-origin: center center;
+}
+#nextQuestion{
+    overflow: hidden;
+    outline: unset!important;
+    border: unset!important;
+  margin-top: 20px!important;
+    padding: 6px 25px;
+    margin-right: 20px!important;
+    transform-origin: center center;
+}
+section{
+    color: #fff;
+    background-color: rgba(0,0,0, 0.1); 
+    margin: 10px 0;
+    padding: 80px 0px;
+}
+#setting{
+   
+}
+.container{
+  
+
+}
+h1 {
+    color: transparent!important;
+    background: linear-gradient(180deg, #08203e 50%, #557c93 50%) no-repeat;
+    -webkit-background-clip: text;
+    -moz-background-clip: text;
+    background-clip: text;
+    -webkit-text-stroke: 1px #fff;
+    background-size: 100% 180%;
+ font-size: 50px!important;
+padding: 20px 0px;
+    animation: gradient 5s infinite alternate;
+ }
+ @keyframes gradient {
+    0% {
+       transform: rotate(0);
+       background-position-y: 0%;
+    }
+    50% {
+       transform: rotate(7deg);
+       background-position-y: 100%;
+    }
+    100% {
+       transform: rotate(-7deg);
+       background-position-y: 0%;
+    }
+ }
+ .show{
+    display: block !important;
+ }
+ #quiz,
+ #setting,
+ #finsish,
+ #inCorrect,
+ #correct,
+ #alertNumber,
+ #alertanswer,
+ #limit {
+    display: none;
+ }
+ .show{
+    display: block!important;
+ }
+ #alertNumber{
+   height: 30px;
+   padding-bottom: 35px!important;
+ }
+ input[name="radio1"]{
+   position: relative;
+ }
+ input[name="radio1"]:checked::after {
+	content: '';
+   position: absolute;
+   left: 0px;
+   top: 0;
+   width: 30px;
+   height: 30px;
+   background-color: rgb(0, 128, 23);
+}
+#limit{
+   height: 30px!important;
+   line-height:30px;
+   padding:0px 15px;
+}
