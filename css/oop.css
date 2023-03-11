@@ -1,4 +1,6 @@
-
+body{
+   overflow: hidden;
+}
 #particles-js{
     background-color: #191f5b;
     width: 100%;
@@ -78,10 +80,7 @@ section{
 #setting{
    
 }
-.container{
-  
 
-}
 h1 {
     color: transparent!important;
     background: linear-gradient(180deg, #08203e 50%, #557c93 50%) no-repeat;
