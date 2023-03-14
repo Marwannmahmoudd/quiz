@@ -11,7 +11,7 @@ document.getElementById("end").addEventListener("click",function(){
     location.reload();
 })
 this.audio = new Audio("audio/صوت صح ✅✅ (128 kbps).mp3")
-this.audio2 = new Audio("audio/صوت علامه خطأ للمونتاج (128 kbps)_1.mp3")
+this.audio2 = new Audio("audio/صوت علامه خطأ للمونتاج (128 kbps)_1_1.mp3")
 this.score = 0;
     }
     showquestion(){
@@ -37,33 +37,48 @@ answerbox +=`
        }
        document.getElementById("questionContent").innerHTML = answerbox
     }
-    nextquestion(){
+  nextquestion(){
 const currentanswer = document.querySelector('[name="answer"]:checked')?.value
 
-if(currentanswer != undefined){
+ if(currentanswer != undefined){
     $("#alertanswer").fadeOut(300)
     this.currentindex ++;
     if(this.currentindex > this.result.length -1){
-        $("#quiz").removeClass("show")
-        $("#finsish").addClass("show")
-        document.getElementById("score").innerText=this.score;
+        if(this.correctanswer.toString().trim() == currentanswer.toString().trim()){
+            $('#Correct').fadeIn(300)
+            $('#Correct').fadeOut(1500)
+           this.audio.play()
+            this.score ++;
+            
           }
           else{
-            console.log(currentanswer);
-console.log(this.correctanswer);
-            if(this.correctanswer.toString().trim() == currentanswer.toString().trim()){
+              $('#inCorrect').fadeIn(300)
+              this.audio2.play()
+              $('#inCorrect').fadeOut(1500)
+              
+          }
+          setTimeout(()=>{
+            $("#quiz").removeClass("show")
+            $("#finsish").addClass("show")
+            document.getElementById("score").innerText=this.score;
+          },2000)
+         
+          }
+         else{
+           if(this.correctanswer.toString().trim() == currentanswer.toString().trim()){
               $('#Correct').fadeIn(300)
-              $('#Correct').fadeOut(1500)
-              this.audio.play()
+              $('#Correct').fadeOut(300)
+             this.audio.play()
               this.score ++;
               
             }
             else{
                 $('#inCorrect').fadeIn(300)
-                $('#inCorrect').fadeOut(1500)
                 this.audio2.play()
+                $('#inCorrect').fadeOut(300)
+                
             }
-            this.showquestion()
+                this.showquestion();
           }
 }else{
     $("#alertanswer").fadeIn(300)
