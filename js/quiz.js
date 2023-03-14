@@ -61,7 +61,7 @@ const currentanswer = document.querySelector('[name="answer"]:checked')?.value
             $("#quiz").removeClass("show")
             $("#finsish").addClass("show")
             document.getElementById("score").innerText=this.score;
-          },2000)
+          },1500)
          
           }
          else{
