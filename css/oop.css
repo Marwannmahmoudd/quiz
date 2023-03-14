@@ -1,13 +1,15 @@
-.particles-js-canvas-el{
-   height: 100vh!important;
+.particles-js-canvas-el {
+   height: 100vh !important;
 }
 #particles-js{
    display: block;
-    background-color: #191f5b;
-    width: 100%!important;
+   background-color: #272168f2;
+   width: 100%!important;
 min-height: 100vh!important;
 overflow-y: auto;
-
+}
+.container{
+  
 }
 .pretty{
     margin: 10px 0;
@@ -147,6 +149,7 @@ padding: 20px 0px;
 }
 @media (min-width: 768px){
 .container, .container-md, .container-sm {
-    max-width: 900px;
+  
+   
 }
 }
