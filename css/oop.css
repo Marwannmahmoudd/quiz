@@ -148,9 +148,9 @@ padding: 20px 0px;
    line-height:30px;
    padding:0px 15px;
 }
-@media (min-width: 768px){
-.container, .container-md, .container-sm {
-  
+@media (max-width: 768px){
+#alertNumber{
+  padding-bottom: 50px!important;
    
 }
 }
